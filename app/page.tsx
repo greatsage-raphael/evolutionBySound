@@ -6,8 +6,8 @@ import { Button } from "../components/ui/button";
 import { Slider } from "../components/ui/slider";
 import Cell from "../components/pages/cell";
 import AudioPlayer from "../components/ui/audioPlayer";
-import { useUser } from "@clerk/nextjs";
-import Header from "../components/ui/header";
+import { v4 as uuidv4 } from 'uuid';
+
 
 export default function InteractiveWave() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -24,7 +24,6 @@ export default function InteractiveWave() {
     intensity: 1.0,
     speed: 1.0,
   });
-  const { user } = useUser();
 
   const [uploadedAudio, setUploadedAudio] = useState<string | null>(null);
 
@@ -33,7 +32,7 @@ export default function InteractiveWave() {
   ) => {
     const file = event.target.files?.[0];
     if (!file) return;
-    const userId = user?.id;
+    const userId = uuidv4();
 
     if (!userId) return;
     const formData = new FormData();
