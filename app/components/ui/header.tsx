@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { UserNav } from './UserNav';
-import { currentUser } from '@clerk/nextjs/server';
-import { FileText } from 'lucide-react';
+import { currentUser } from '@clerk/nextjs';
 
 export default async function Header() {
   const user = await currentUser();
@@ -27,7 +26,7 @@ export default async function Header() {
               />
             </>
           ) : (
-            <Link href="/">
+            <Link href="/upload">
               <button className="text-md primary-gradient primary-shadow rounded-lg px-5 py-1 text-center text-light md:px-10 md:py-2 md:text-xl">
                 Sign in
               </button>
