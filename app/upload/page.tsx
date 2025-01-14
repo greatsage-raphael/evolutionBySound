@@ -2,10 +2,10 @@
 
 import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
-import { Button } from "../components/ui/button";
-import { Slider } from "../components/ui/slider";
-import Cell from "../components/pages/cell";
-import AudioPlayer from "../components/ui/audioPlayer";
+import { Button } from "../../components/ui/button";
+import { Slider } from "../../components/ui/slider";
+import Cell from "../../components/pages/cell";
+import AudioPlayer from "../../components/ui/audioPlayer";
 import { useUser } from "@clerk/nextjs";
 
 
