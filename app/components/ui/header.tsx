@@ -27,7 +27,7 @@ export default async function Header() {
               />
             </>
           ) : (
-            <Link href="/upload">
+            <Link href="/">
               <button className="text-md primary-gradient primary-shadow rounded-lg px-5 py-1 text-center text-light md:px-10 md:py-2 md:text-xl">
                 Sign in
               </button>
